@@ -30,5 +30,17 @@ namespace Movies
         {
             Close();
         }
+
+        private void listBox_actores_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach(Actor a in listener.GetBaseDeDatos().GetActores())
+            {
+                if (listBox_actores.SelectedItem.ToString() == a.GetNombre() + " " + a.GetApellido())
+                {
+                    MessageBox.Show($"Nombre: " + a.GetNombre() + " " + a.GetApellido() + "\nFecha de nacimiento: "
+                        + a.GetCumpleanos() + "\nBiografía: " + a.GetBiografia(), a.GetNombre() + " " + a.GetApellido(), MessageBoxButtons.OK);
+                }
+            }
+        }
     }
 }

@@ -51,6 +51,7 @@
             this.listBox_directores.Name = "listBox_directores";
             this.listBox_directores.Size = new System.Drawing.Size(652, 224);
             this.listBox_directores.TabIndex = 7;
+            this.listBox_directores.SelectedIndexChanged += new System.EventHandler(this.listBox_directores_SelectedIndexChanged);
             // 
             // label1
             // 

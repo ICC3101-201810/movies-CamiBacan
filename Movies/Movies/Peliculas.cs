@@ -32,11 +32,29 @@ namespace Movies
             {
                 MessageBox.Show("No hay películas en la base de datos!");
             }
+
+            
         }
 
         private void button_salir_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void listBox_peliculas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (Pelicula p in listener.GetBaseDeDatos().GetPeliculas())
+            {
+                if (listBox_peliculas.SelectedItem.ToString() == p.GetNombre())
+                {
+                    MessageBox.Show("Nombre: " + p.GetNombre() + "\nDirector" + p.GetDirector().GetNombre() + " " +
+                        p.GetDirector().GetApellido() + "\nEstudio: " +p.GetEstudio().GetNombre() + "\nFecha de estreno: " + 
+                        p.GetFechaEstreno() + "\nDescripción: " + p.GetDescripcion() + "\nPresupuesto: "
+                        + p.GetPresupuesto(), p.GetNombre(), MessageBoxButtons.OK);
+
+                }
+                
+            }
         }
     }
 }

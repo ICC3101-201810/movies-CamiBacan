@@ -30,5 +30,17 @@ namespace Movies
         {
             Close();
         }
+
+        private void listBox_estudios_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach(Estudio es in listener.GetBaseDeDatos().GetEstudios())
+            {
+                if (listBox_estudios.SelectedItem.ToString() == es.GetNombre())
+                {
+                    MessageBox.Show("Nombre: " + es.GetNombre() + "\nDireccion: " + es.GetDireccion() +
+                        "\nFecha de apertura: " + es.GetFechaApertura(), es.GetNombre(), MessageBoxButtons.OK);
+                }
+            }
+        }
     }
 }

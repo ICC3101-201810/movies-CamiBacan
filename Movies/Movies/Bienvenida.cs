@@ -25,10 +25,13 @@ namespace Movies
             Estudio disneyStudios = new Estudio("DisneyStudios", "Disney", "07/05/1872");
             Pelicula pelicula1 = new Pelicula("Mulan", directorMulan, "04/09/1992", "Best película", "9876543234567 MUSD$", disneyStudios);
             Pelicula pelicula2 = new Pelicula("Enredados", directorEnredados, "2012", "best pelicula", "mucha plata", disneyStudios);
+            Productor productor1 = new Productor("Nombreproductor1", "Apellidoproductor1", "Cumpleanosproductor1", "Biografiproductor1");
+            Actor actor1 = new Actor("Cameron", "Díaz", "01/01/01", "Es un pez.");
+            Director director1 = new Director("James", "Cameron", "01/01/01", "No es un pez.");
 
             bd.GetDirectores().Add(directorEnredados); bd.GetEstudios().Add(disneyStudios);
-            bd.GetDirectores().Add(directorMulan); bd.GetPeliculas().Add(pelicula1);
-                                                   bd.GetPeliculas().Add(pelicula2);
+            bd.GetDirectores().Add(directorMulan); bd.GetPeliculas().Add(pelicula1); bd.GetProductores().Add(productor1);
+            bd.GetPeliculas().Add(pelicula2); bd.GetActores().Add(actor1); bd.GetDirectores().Add(director1);
         }
 
         public BaseDeDatos GetBaseDeDatos()

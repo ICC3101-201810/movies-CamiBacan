@@ -51,6 +51,7 @@
             this.listBox_actores.Name = "listBox_actores";
             this.listBox_actores.Size = new System.Drawing.Size(652, 224);
             this.listBox_actores.TabIndex = 4;
+            this.listBox_actores.SelectedIndexChanged += new System.EventHandler(this.listBox_actores_SelectedIndexChanged);
             // 
             // label1
             // 

@@ -51,6 +51,7 @@
             this.listBox_estudios.Name = "listBox_estudios";
             this.listBox_estudios.Size = new System.Drawing.Size(652, 224);
             this.listBox_estudios.TabIndex = 13;
+            this.listBox_estudios.SelectedIndexChanged += new System.EventHandler(this.listBox_estudios_SelectedIndexChanged);
             // 
             // label1
             // 

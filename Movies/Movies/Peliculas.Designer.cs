@@ -51,6 +51,7 @@
             this.listBox_peliculas.Name = "listBox_peliculas";
             this.listBox_peliculas.Size = new System.Drawing.Size(652, 224);
             this.listBox_peliculas.TabIndex = 1;
+            this.listBox_peliculas.SelectedIndexChanged += new System.EventHandler(this.listBox_peliculas_SelectedIndexChanged);
             // 
             // button_salir
             // 

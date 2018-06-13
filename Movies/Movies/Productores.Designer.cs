@@ -51,6 +51,7 @@
             this.listBox_productores.Name = "listBox_productores";
             this.listBox_productores.Size = new System.Drawing.Size(652, 224);
             this.listBox_productores.TabIndex = 10;
+            this.listBox_productores.SelectedIndexChanged += new System.EventHandler(this.listBox_productores_SelectedIndexChanged);
             // 
             // label1
             // 
