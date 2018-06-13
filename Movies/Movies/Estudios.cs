@@ -34,14 +34,21 @@ namespace Movies
 
         private void listBox_estudios_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach(Estudio es in listener.GetBaseDeDatos().GetEstudios())
+            if (String.IsNullOrEmpty(listBox_estudios.Text.ToString()))
             {
-                if (listBox_estudios.SelectedItem.ToString() == es.GetNombre())
+                MessageBox.Show("No seleccionaste nada!");
+            }
+            else
+            {
+                foreach (Estudio es in listener.GetBaseDeDatos().GetEstudios())
                 {
-                    PerfilEstudios perfilEstudios = new PerfilEstudios(listener, es, es.GetNombre());
-                    perfilEstudios.ShowDialog();
-                    Hide();
-                    Show();
+                    if (listBox_estudios.SelectedItem.ToString() == es.GetNombre())
+                    {
+                        PerfilEstudios perfilEstudios = new PerfilEstudios(listener, es, es.GetNombre());
+                        perfilEstudios.ShowDialog();
+                        Hide();
+                        Show();
+                    }
                 }
             }
         }

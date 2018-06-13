@@ -45,11 +45,10 @@ namespace Movies
 
         private void Bienvenida_Load(object sender, EventArgs e)
         {
-            /*timer.Interval = 5000;
+            timer.Interval = 5000;
             timer.Tick += new EventHandler(timer_Tick);
-            timer.Start();*/
-            Main_Window main_Window = new Main_Window(this);
-            main_Window.ShowDialog();
+            timer.Start();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -57,13 +56,13 @@ namespace Movies
             Serializacion.Guardar(bd);
             Close();
         }
-        /*void timer_Tick(object sender, EventArgs e)
-{
-   timer.Stop();
-   Main_Window main_Window = new Main_Window(this);
-   main_Window.ShowDialog();
-   //timer.Tick -= new EventHandler(timer_Tick);
-   Close();
-}*/
+        void timer_Tick(object sender, EventArgs e)
+        {
+            timer.Stop();
+            Main_Window main_Window = new Main_Window(this);
+            main_Window.ShowDialog();
+            Hide();
+            Show();
+        }
     }
 }

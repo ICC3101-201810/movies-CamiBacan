@@ -31,6 +31,7 @@ namespace Movies
                 {
                     bd.GetPeliculas().Add(p);
                 }
+                
             }
             using (Stream stream = File.Open(@"..\..\data\DataDirectores.bin", FileMode.Open))
             {
@@ -63,19 +64,19 @@ namespace Movies
             {
                 BinaryFormatter binaryFormatter = new BinaryFormatter();
                 List<PeliculaActor> peliculaActores = (List<PeliculaActor>)binaryFormatter.Deserialize(stream);
-                foreach (PeliculaActor a in peliculaActores)
+                /*foreach (PeliculaActor a in peliculaActores)
                 {
                     bd.GetPeliculaActores().Add(a);
-                }
+                }*/
             }
             using (Stream stream = File.Open(@"..\..\data\DataPeliculaProductores.bin", FileMode.Open))
             {
                 BinaryFormatter binaryFormatter = new BinaryFormatter();
                 List<PeliculaProductor> peliculaProductores = (List<PeliculaProductor>)binaryFormatter.Deserialize(stream);
-                foreach (PeliculaProductor a in peliculaProductores)
+                /*foreach (PeliculaProductor a in peliculaProductores)
                 {
                     bd.GetPeliculaProductores().Add(a);
-                }
+                }*/
             }
         }
 

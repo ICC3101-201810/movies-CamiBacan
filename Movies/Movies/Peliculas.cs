@@ -44,15 +44,22 @@ namespace Movies
 
         private void listBox_peliculas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (Pelicula p in listener.GetBaseDeDatos().GetPeliculas())
+            if (String.IsNullOrEmpty(listBox_peliculas.Text.ToString()))
             {
-                if (listBox_peliculas.SelectedItem.ToString() == p.GetNombre())
+                MessageBox.Show("No seleccionaste nada!");
+            }
+            else
+            {
+                foreach (Pelicula p in listener.GetBaseDeDatos().GetPeliculas())
                 {
-                    PerfilPeliculas perfilPeliculas = new PerfilPeliculas(listener, p, p.GetNombre());
-                    perfilPeliculas.ShowDialog();
-                    Hide();
-                    Show();
-                }                
+                    if (listBox_peliculas.SelectedItem.ToString() == p.GetNombre())
+                    {
+                        PerfilPeliculas perfilPeliculas = new PerfilPeliculas(listener, p, p.GetNombre());
+                        perfilPeliculas.ShowDialog();
+                        Hide();
+                        Show();
+                    }
+                }
             }
         }
     }
