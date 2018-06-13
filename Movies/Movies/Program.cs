@@ -6,6 +6,7 @@ using System.Windows.Forms;
 
 namespace Movies
 {
+    [Serializable]
     static class Program
     {
         /// <summary>

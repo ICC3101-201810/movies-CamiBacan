@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace Movies
 {
+    [Serializable]
     public partial class Peliculas : Form
     {
         private IDBer listener;

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace Movies
 {
+    [Serializable]
     public partial class Main_Window : Form
     {
         private IDBer listener;
@@ -47,6 +48,7 @@ namespace Movies
 
         private void button_salir_Click(object sender, EventArgs e)
         {
+            Serializacion.Guardar(listener.GetBaseDeDatos());
             Close();
         }
 

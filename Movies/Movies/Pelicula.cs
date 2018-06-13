@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Movies
 {
+    [Serializable]
     public class Pelicula
     {
         string nombre;

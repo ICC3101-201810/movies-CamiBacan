@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Movies
 {
+    [Serializable]
     abstract public class Persona
     {
         string Nombre;
