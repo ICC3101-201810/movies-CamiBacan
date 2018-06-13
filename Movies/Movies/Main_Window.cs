@@ -49,5 +49,38 @@ namespace Movies
         {
             Close();
         }
+
+        private void button_actores_Click(object sender, EventArgs e)
+        {
+            Actores actores = new Actores(listener);
+            actores.ShowDialog();
+            Hide();
+            Show();
+        }
+
+        private void button_directores_Click(object sender, EventArgs e)
+        {
+            Directores directores = new Directores(listener);
+            directores.ShowDialog();
+            Hide();
+            Show();
+        }
+
+        private void Productores_Click(object sender, EventArgs e)
+        {
+            Productores productores = new Productores(listener);
+            productores.ShowDialog();
+            Hide();
+            Show();
+        }
+
+        private void button_estudios_Click(object sender, EventArgs e)
+        {
+            Estudios estudios = new Estudios(listener);
+            estudios.ShowDialog();
+            Hide();
+            Show();
+
+        }
     }
 }

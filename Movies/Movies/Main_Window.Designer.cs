@@ -65,24 +65,27 @@
             this.button_actores.TabIndex = 2;
             this.button_actores.Text = "Actores";
             this.button_actores.UseVisualStyleBackColor = true;
+            this.button_actores.Click += new System.EventHandler(this.button_actores_Click);
             // 
             // button_directores
             // 
-            this.button_directores.Location = new System.Drawing.Point(315, 94);
+            this.button_directores.Location = new System.Drawing.Point(306, 94);
             this.button_directores.Name = "button_directores";
-            this.button_directores.Size = new System.Drawing.Size(105, 34);
+            this.button_directores.Size = new System.Drawing.Size(124, 34);
             this.button_directores.TabIndex = 3;
             this.button_directores.Text = "Directores";
             this.button_directores.UseVisualStyleBackColor = true;
+            this.button_directores.Click += new System.EventHandler(this.button_directores_Click);
             // 
             // Productores
             // 
-            this.Productores.Location = new System.Drawing.Point(446, 94);
+            this.Productores.Location = new System.Drawing.Point(436, 94);
             this.Productores.Name = "Productores";
-            this.Productores.Size = new System.Drawing.Size(105, 34);
+            this.Productores.Size = new System.Drawing.Size(124, 34);
             this.Productores.TabIndex = 4;
             this.Productores.Text = "Productores";
             this.Productores.UseVisualStyleBackColor = true;
+            this.Productores.Click += new System.EventHandler(this.Productores_Click);
             // 
             // button_salir
             // 
@@ -107,10 +110,11 @@
             // 
             this.button_estudios.Location = new System.Drawing.Point(576, 94);
             this.button_estudios.Name = "button_estudios";
-            this.button_estudios.Size = new System.Drawing.Size(105, 34);
+            this.button_estudios.Size = new System.Drawing.Size(124, 34);
             this.button_estudios.TabIndex = 7;
             this.button_estudios.Text = "Estudios";
             this.button_estudios.UseVisualStyleBackColor = true;
+            this.button_estudios.Click += new System.EventHandler(this.button_estudios_Click);
             // 
             // Main_Window
             // 
