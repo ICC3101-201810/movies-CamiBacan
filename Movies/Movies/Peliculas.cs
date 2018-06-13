@@ -62,5 +62,18 @@ namespace Movies
                 }
             }
         }
+
+        private void button_criticas_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(listBox_peliculas.Text.ToString()))
+            {
+                MessageBox.Show("No seleccionaste nada!");
+            }
+            else
+            {
+                Criticas criticas = new Criticas(listener, listBox_peliculas.SelectedItem.ToString());
+                criticas.ShowDialog();
+            }
+        }
     }
 }

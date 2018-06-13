@@ -15,6 +15,7 @@ namespace Movies
         string descripcion;
         string presupuesto;
         Estudio estudio;
+        List<Critica> criticas;
         
         public Pelicula(string Nombre, Director Director, string estreno, string Descripcion, string Presupuesto, Estudio Estudio)
         {
@@ -49,6 +50,10 @@ namespace Movies
         public Estudio GetEstudio()
         {
             return estudio;
+        }
+        public List<Critica> GetCriticas()
+        {
+            return criticas;
         }
     }
 }

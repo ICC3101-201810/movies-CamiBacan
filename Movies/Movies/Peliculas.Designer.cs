@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.listBox_peliculas = new System.Windows.Forms.ListBox();
             this.button_salir = new System.Windows.Forms.Button();
+            this.button_criticas = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -63,11 +64,22 @@
             this.button_salir.UseVisualStyleBackColor = true;
             this.button_salir.Click += new System.EventHandler(this.button_salir_Click);
             // 
+            // button_criticas
+            // 
+            this.button_criticas.Location = new System.Drawing.Point(373, 366);
+            this.button_criticas.Name = "button_criticas";
+            this.button_criticas.Size = new System.Drawing.Size(137, 42);
+            this.button_criticas.TabIndex = 3;
+            this.button_criticas.Text = "Criticas";
+            this.button_criticas.UseVisualStyleBackColor = true;
+            this.button_criticas.Click += new System.EventHandler(this.button_criticas_Click);
+            // 
             // Peliculas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_criticas);
             this.Controls.Add(this.button_salir);
             this.Controls.Add(this.listBox_peliculas);
             this.Controls.Add(this.label1);
@@ -83,5 +95,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox listBox_peliculas;
         private System.Windows.Forms.Button button_salir;
+        private System.Windows.Forms.Button button_criticas;
     }
 }

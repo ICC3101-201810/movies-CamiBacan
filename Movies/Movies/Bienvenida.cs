@@ -36,6 +36,8 @@ namespace Movies
             bd.GetDirectores().Add(directorMulan); bd.GetPeliculas().Add(pelicula1); bd.GetProductores().Add(productor1);
             bd.GetPeliculas().Add(pelicula2); bd.GetActores().Add(actor1); bd.GetDirectores().Add(director1);
             bd.GetPeliculaActores().Add(peliculaActor); bd.GetPeliculaProductores().Add(peliculaProductor);*/
+
+            
         }
 
         public BaseDeDatos GetBaseDeDatos()
