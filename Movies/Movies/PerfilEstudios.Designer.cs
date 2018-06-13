@@ -52,6 +52,7 @@
             this.listView_estudios.TabIndex = 11;
             this.listView_estudios.UseCompatibleStateImageBehavior = false;
             this.listView_estudios.View = System.Windows.Forms.View.List;
+            this.listView_estudios.SelectedIndexChanged += new System.EventHandler(this.listView_estudios_SelectedIndexChanged);
             // 
             // label_nombre
             // 
@@ -72,6 +73,7 @@
             this.label_tipo.Size = new System.Drawing.Size(210, 40);
             this.label_tipo.TabIndex = 9;
             this.label_tipo.Text = "[label tipo]:";
+            this.label_tipo.Click += new System.EventHandler(this.label_tipo_Click);
             // 
             // PerfilEstudios
             // 

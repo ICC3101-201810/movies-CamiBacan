@@ -12,16 +12,21 @@ namespace Movies
 {
     public partial class PerfilPeliculas : Form
     {
-        public PerfilPeliculas(Pelicula pelicula)
+        public PerfilPeliculas(Pelicula pelicula, string nombre)
         {
-            label_tipo.Text = "Peliculas";
             InitializeComponent();
-            listView_peliculas.Items.Add("Nombre: " + pelicula.GetNombre());
-            listView_peliculas.Items.Add("Director" + pelicula.GetDirector().GetNombre() + " " + pelicula.GetDirector().GetApellido());
-            listView_peliculas.Items.Add("Estudio: " + pelicula.GetEstudio().GetNombre());
-            listView_peliculas.Items.Add("Fecha de estreno: " +  pelicula.GetFechaEstreno());
-            listView_peliculas.Items.Add("Descripción: " + pelicula.GetDescripcion());
-            listView_peliculas.Items.Add("Presupuesto: " + pelicula.GetPresupuesto());
+            if (pelicula is Pelicula)
+            {
+                label_tipo.Text = "Peliculas:";
+                label_nombre.Text = nombre;
+                listView_peliculas.Items.Add("Nombre: " + pelicula.GetNombre());
+                listView_peliculas.Items.Add("Director" + pelicula.GetDirector().GetNombre() + " " + pelicula.GetDirector().GetApellido());
+                listView_peliculas.Items.Add("Estudio: " + pelicula.GetEstudio().GetNombre());
+                listView_peliculas.Items.Add("Fecha de estreno: " + pelicula.GetFechaEstreno());
+                listView_peliculas.Items.Add("Descripción: " + pelicula.GetDescripcion());
+                listView_peliculas.Items.Add("Presupuesto: " + pelicula.GetPresupuesto());
+            }
+        
         }
 
         private void button_salir_Click(object sender, EventArgs e)
