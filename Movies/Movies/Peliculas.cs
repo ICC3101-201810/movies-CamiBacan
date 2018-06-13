@@ -47,7 +47,7 @@ namespace Movies
             {
                 if (listBox_peliculas.SelectedItem.ToString() == p.GetNombre())
                 {
-                    PerfilPeliculas perfilPeliculas = new PerfilPeliculas(p, p.GetNombre());
+                    PerfilPeliculas perfilPeliculas = new PerfilPeliculas(listener, p, p.GetNombre());
                     perfilPeliculas.ShowDialog();
                     Hide();
                     Show();

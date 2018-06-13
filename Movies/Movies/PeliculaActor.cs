@@ -10,19 +10,19 @@ namespace Movies
     {
         Pelicula Pelicula;
         Actor Actor;
-        List<PeliculaActor> peliculaActores;
+        //List<PeliculaActor> peliculaActores;
 
         public PeliculaActor(Pelicula pelicula, Actor actor)
         {
             Pelicula = pelicula;
             Actor = actor;
-            peliculaActores = new List<PeliculaActor>();
+            //peliculaActores = new List<PeliculaActor>();
         }
 
-        public List<PeliculaActor> GetPeliculaActores()
+        /*public List<PeliculaActor> GetPeliculaActores()
         {
             return peliculaActores;
-        }
+        }*/
 
         public Pelicula GetPelicula()
         {

@@ -6,8 +6,25 @@ using System.Threading.Tasks;
 
 namespace Movies
 {
-    class PeliculaProductor
+    public class PeliculaProductor
     {
+        Pelicula Pelicula;
+        Productor Productor;
 
+        public PeliculaProductor(Pelicula pelicula, Productor productor)
+        {
+            Pelicula = pelicula;
+            Productor = productor;
+        }
+
+        public Pelicula GetPelicula()
+        {
+            return Pelicula;
+        }
+
+        public Productor GetProductor()
+        {
+            return Productor;
+        }
     }
 }

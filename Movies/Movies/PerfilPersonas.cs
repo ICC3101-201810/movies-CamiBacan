@@ -25,9 +25,18 @@ namespace Movies
             if(persona is Actor)
             {
                 label_tipoPersona.Text = "Actor:";
+                listView1.Items.Add("----- Informacion: -----");
                 listView1.Items.Add("Nombre: " + persona.GetNombre() + " " + persona.GetApellido());
                 listView1.Items.Add("Fecha de nacimiento: " + persona.GetCumpleanos());
                 listView1.Items.Add("Biografia: " + persona.GetBiografia());
+                listView1.Items.Add("----- Peliculas: -----");
+                foreach(PeliculaActor pa in listener.GetBaseDeDatos().GetPeliculaActores())
+                {
+                    if (pa.GetActor().GetNombre() == persona.GetNombre())
+                    {
+                        listView1.Items.Add(pa.GetPelicula().GetNombre());
+                    }
+                }
             }
             else if (persona is Productor)
             {
@@ -35,6 +44,14 @@ namespace Movies
                 listView1.Items.Add("Nombre: " + persona.GetNombre() + " " + persona.GetApellido());
                 listView1.Items.Add("Fecha de nacimiento: " + persona.GetCumpleanos());
                 listView1.Items.Add("Biografia: " + persona.GetBiografia());
+                listView1.Items.Add("----- Peliculas: -----");
+                foreach (PeliculaProductor pp in listener.GetBaseDeDatos().GetPeliculaProductores())
+                {
+                    if (pp.GetProductor().GetNombre() == persona.GetNombre())
+                    {
+                        listView1.Items.Add(pp.GetPelicula().GetNombre());
+                    }
+                }
             }
             else if (persona is Director)
             {
@@ -42,7 +59,15 @@ namespace Movies
                 listView1.Items.Add("Nombre: " + persona.GetNombre() + " " + persona.GetApellido());
                 listView1.Items.Add("Fecha de nacimiento: " + persona.GetCumpleanos());
                 listView1.Items.Add("Biografia: " + persona.GetBiografia());
-            }         
+                listView1.Items.Add("----- Peliculas: -----");
+                foreach(Pelicula p in listener.GetBaseDeDatos().GetPeliculas())
+                {
+                    if (p.GetDirector().GetNombre() == persona.GetNombre())
+                    {
+                        listView1.Items.Add(p.GetNombre());
+                    }
+                }
+            }
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)

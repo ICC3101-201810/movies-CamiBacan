@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Movies
 {
-    class Productor : Persona
+    public class Productor : Persona
     {
         public Productor(string nombre, string apellido, string cumpleanos, string biografia) : base(nombre, apellido, cumpleanos, biografia)
         {

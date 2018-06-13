@@ -13,6 +13,8 @@ namespace Movies
         List<Productor> productores;
         List<Director> directores;
         List<Estudio> estudios;
+        List<PeliculaActor> peliculaActores;
+        List<PeliculaProductor> peliculaProductores;
 
         public BaseDeDatos()
         {
@@ -21,6 +23,8 @@ namespace Movies
             productores = new List<Productor>();
             directores = new List<Director>();
             estudios = new List<Estudio>();
+            peliculaActores = new List<PeliculaActor>();
+            peliculaProductores = new List<PeliculaProductor>();
         }
 
         internal List<Pelicula> GetPeliculas()
@@ -46,6 +50,16 @@ namespace Movies
         internal List<Estudio> GetEstudios()
         {
             return estudios;
+        }
+
+        internal List<PeliculaActor> GetPeliculaActores()
+        {
+            return peliculaActores;
+        }
+
+        internal List<PeliculaProductor> GetPeliculaProductores()
+        {
+            return peliculaProductores;
         }
 
     }

@@ -37,7 +37,7 @@ namespace Movies
             {
                 if (listBox_estudios.SelectedItem.ToString() == es.GetNombre())
                 {
-                    PerfilEstudios perfilEstudios = new PerfilEstudios(es, es.GetNombre());
+                    PerfilEstudios perfilEstudios = new PerfilEstudios(listener, es, es.GetNombre());
                     perfilEstudios.ShowDialog();
                     Hide();
                     Show();
