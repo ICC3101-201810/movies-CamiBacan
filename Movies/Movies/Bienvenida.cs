@@ -47,13 +47,19 @@ namespace Movies
             Main_Window main_Window = new Main_Window(this);
             main_Window.ShowDialog();
         }
-        /*void timer_Tick(object sender, EventArgs e)
+
+        private void button1_Click(object sender, EventArgs e)
         {
-            timer.Stop();
-            Main_Window main_Window = new Main_Window(this);
-            main_Window.ShowDialog();
-            //timer.Tick -= new EventHandler(timer_Tick);
+
             Close();
-        }*/
+        }
+        /*void timer_Tick(object sender, EventArgs e)
+{
+   timer.Stop();
+   Main_Window main_Window = new Main_Window(this);
+   main_Window.ShowDialog();
+   //timer.Tick -= new EventHandler(timer_Tick);
+   Close();
+}*/
     }
 }

@@ -37,8 +37,10 @@ namespace Movies
             {
                 if (listBox_estudios.SelectedItem.ToString() == es.GetNombre())
                 {
-                    MessageBox.Show("Nombre: " + es.GetNombre() + "\nDireccion: " + es.GetDireccion() +
-                        "\nFecha de apertura: " + es.GetFechaApertura(), es.GetNombre(), MessageBoxButtons.OK);
+                    PerfilEstudios perfilEstudios = new PerfilEstudios(es);
+                    perfilEstudios.ShowDialog();
+                    Hide();
+                    Show();
                 }
             }
         }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Movies
 {
-    class Pelicula
+    public class Pelicula
     {
         string nombre;
         Director director;

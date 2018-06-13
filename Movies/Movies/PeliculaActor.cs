@@ -6,7 +6,31 @@ using System.Threading.Tasks;
 
 namespace Movies
 {
-    class PeliculaActor
+    public class PeliculaActor
     {
+        Pelicula Pelicula;
+        Actor Actor;
+        List<PeliculaActor> peliculaActores;
+
+        public PeliculaActor(Pelicula pelicula, Actor actor)
+        {
+            Pelicula = pelicula;
+            Actor = actor;
+            peliculaActores = new List<PeliculaActor>();
+        }
+
+        public List<PeliculaActor> GetPeliculaActores()
+        {
+            return peliculaActores;
+        }
+
+        public Pelicula GetPelicula()
+        {
+            return Pelicula;
+        }
+        public Actor GetActor()
+        {
+            return Actor;
+        }
     }
 }

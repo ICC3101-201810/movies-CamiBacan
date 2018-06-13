@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Movies
 {
-    abstract class Persona
+    abstract public class Persona
     {
         string Nombre;
         string Apellido;

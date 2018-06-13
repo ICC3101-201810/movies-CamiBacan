@@ -42,8 +42,10 @@ namespace Movies
             {
                 if(listBox_productores.SelectedItem.ToString() == p.GetNombre() + " " + p.GetApellido())
                 {
-                    MessageBox.Show("Nombre: " + p.GetNombre() + " " + p.GetApellido() + "\nFecha de nacimiento: " + p.GetCumpleanos()
-                        + "\nBiografia: " + p.GetBiografia(), p.GetNombre() + " " + p.GetApellido(), MessageBoxButtons.OK);
+                    PerfilPersonas perfilPersonas = new PerfilPersonas(listener, p, p.GetNombre() + " " + p.GetApellido());
+                    perfilPersonas.ShowDialog();
+                    Hide();
+                    Show();
                 }
             }
         }

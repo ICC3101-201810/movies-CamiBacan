@@ -89,6 +89,24 @@
     <Compile Include="Peliculas.Designer.cs">
       <DependentUpon>Peliculas.cs</DependentUpon>
     </Compile>
+    <Compile Include="PerfilEstudios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerfilEstudios.Designer.cs">
+      <DependentUpon>PerfilEstudios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerfilPeliculas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerfilPeliculas.Designer.cs">
+      <DependentUpon>PerfilPeliculas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerfilPersonas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerfilPersonas.Designer.cs">
+      <DependentUpon>PerfilPersonas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Persona.cs" />
     <Compile Include="Productor.cs" />
     <Compile Include="Productores.cs">
@@ -116,6 +134,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Peliculas.resx">
       <DependentUpon>Peliculas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerfilEstudios.resx">
+      <DependentUpon>PerfilEstudios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerfilPeliculas.resx">
+      <DependentUpon>PerfilPeliculas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerfilPersonas.resx">
+      <DependentUpon>PerfilPersonas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Productores.resx">
       <DependentUpon>Productores.cs</DependentUpon>

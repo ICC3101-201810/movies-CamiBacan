@@ -47,13 +47,11 @@ namespace Movies
             {
                 if (listBox_peliculas.SelectedItem.ToString() == p.GetNombre())
                 {
-                    MessageBox.Show("Nombre: " + p.GetNombre() + "\nDirector" + p.GetDirector().GetNombre() + " " +
-                        p.GetDirector().GetApellido() + "\nEstudio: " +p.GetEstudio().GetNombre() + "\nFecha de estreno: " + 
-                        p.GetFechaEstreno() + "\nDescripción: " + p.GetDescripcion() + "\nPresupuesto: "
-                        + p.GetPresupuesto(), p.GetNombre(), MessageBoxButtons.OK);
-
-                }
-                
+                    PerfilPeliculas perfilPeliculas = new PerfilPeliculas(p);
+                    perfilPeliculas.ShowDialog();
+                    Hide();
+                    Show();
+                }                
             }
         }
     }

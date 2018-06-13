@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Movies
 {
-    class Director : Persona
+    public class Director : Persona
     {
         public Director(string nombre, string apellido, string cumpleanos, string biografia) : base(nombre, apellido, cumpleanos, biografia)
         {
