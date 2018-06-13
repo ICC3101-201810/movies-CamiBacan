@@ -15,8 +15,7 @@ namespace Movies
         string presupuesto;
         Estudio estudio;
         
-        public Pelicula(string Nombre, Director Director,
-            string estreno, string Descripcion, string Presupuesto, Estudio Estudio)
+        public Pelicula(string Nombre, Director Director, string estreno, string Descripcion, string Presupuesto, Estudio Estudio)
         {
             nombre = Nombre;
             director = Director;
@@ -26,6 +25,29 @@ namespace Movies
             estudio = Estudio;
         }
 
-
+        public string GetNombre()
+        {
+            return nombre;
+        }
+        public Director GetDirector()
+        {
+            return director;
+        }
+        public string GetFechaEstreno()
+        {
+            return fechaEstreno;
+        }
+        public string GetDescripcion()
+        {
+            return descripcion;
+        }
+        public string GetPresupuesto()
+        {
+            return presupuesto;
+        }
+        public Estudio GetEstudio()
+        {
+            return estudio;
+        }
     }
 }

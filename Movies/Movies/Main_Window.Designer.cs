@@ -55,6 +55,7 @@
             this.button_peliculas.TabIndex = 1;
             this.button_peliculas.Text = "Películas";
             this.button_peliculas.UseVisualStyleBackColor = true;
+            this.button_peliculas.Click += new System.EventHandler(this.button_peliculas_Click);
             // 
             // button_actores
             // 
@@ -91,6 +92,7 @@
             this.button_salir.TabIndex = 6;
             this.button_salir.Text = "Salir";
             this.button_salir.UseVisualStyleBackColor = true;
+            this.button_salir.Click += new System.EventHandler(this.button_salir_Click);
             // 
             // listView1
             // 

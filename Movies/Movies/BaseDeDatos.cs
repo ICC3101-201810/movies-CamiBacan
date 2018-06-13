@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Movies
 {
-    class BaseDeDatos
+    public class BaseDeDatos
     {
         List<Pelicula> peliculas;
         List<Actor> actores;
@@ -23,27 +23,27 @@ namespace Movies
             estudios = new List<Estudio>();
         }
 
-        public List<Pelicula> GetPeliculas()
+        internal List<Pelicula> GetPeliculas()
         {
             return peliculas;
         }
 
-        public List<Actor> GetActores()
+        internal List<Actor> GetActores()
         {
             return actores;
         }
 
-        public List<Productor> GetProductores()
+        internal List<Productor> GetProductores()
         {
             return productores;
         }
 
-        public List<Director> GetDirectores()
+        internal List<Director> GetDirectores()
         {
             return directores;
         }
 
-        public List<Estudio> GetEstudios()
+        internal List<Estudio> GetEstudios()
         {
             return estudios;
         }

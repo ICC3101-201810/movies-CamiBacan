@@ -55,6 +55,7 @@
     </Compile>
     <Compile Include="Director.cs" />
     <Compile Include="Estudio.cs" />
+    <Compile Include="IDBer.cs" />
     <Compile Include="Main_Window.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +65,12 @@
     <Compile Include="Pelicula.cs" />
     <Compile Include="PeliculaActor.cs" />
     <Compile Include="PeliculaProductor.cs" />
+    <Compile Include="Peliculas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Peliculas.Designer.cs">
+      <DependentUpon>Peliculas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Persona.cs" />
     <Compile Include="Productor.cs" />
     <Compile Include="Program.cs" />
@@ -73,6 +80,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main_Window.resx">
       <DependentUpon>Main_Window.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Peliculas.resx">
+      <DependentUpon>Peliculas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

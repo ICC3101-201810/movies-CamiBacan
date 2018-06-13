@@ -12,9 +12,14 @@ namespace Movies
 {
     public partial class Main_Window : Form
     {
-        public Main_Window()
+        private IDBer listener;
+        public Main_Window(object sender)
         {
             InitializeComponent();
+            if (sender is IDBer)
+            {
+                listener = (IDBer)sender;
+            }
         }
 
         private void Main_Window_Load(object sender, EventArgs e)
@@ -30,6 +35,19 @@ namespace Movies
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button_peliculas_Click(object sender, EventArgs e)
+        {
+            Peliculas peliculas = new Peliculas(listener);
+            peliculas.ShowDialog();
+            Hide();
+            Show();
+        }
+
+        private void button_salir_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
